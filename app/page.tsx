@@ -1,23 +1,40 @@
 import { Button } from "@/components/ui/button";
+import Navbar from "@/components/ui/navbar"
+
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-zinc-950 text-white">
-      <section className="flex flex-col mx-auto px-4 py-2 items-center mt-20 max-w-3xl">
-        <h1 className ="mb-2 text-emerald-500 font-bold text-4xl">
+    <main className="min-h-full text-white">
+      <Navbar />
+
+      <section className="relative flex flex-col items-center py-50 w-full border-b-4 border-emerald-500">
+        <div
+         className='absolute inset-0 -z-10'
+      style={{
+      backgroundImage: "url('/pomodoro.avif')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      filter: "blur(5px)",
+      }}
+      />
+
+      <div className="max-w-3xl mx-auto px-4 flex flex-col items-center">
+        <h1 className ="mb-2 text-emerald-500 font-bold text-4xl rounded-xl border border-zinc-600 p-3 bg-zinc-900">
           FocusBrew! Your assistant app to Podomoro!
         </h1>
-        <p className ="mb-7 text-2xl">
-          Customized specially for you! :)
+         <p className =" text-2xl text-center">
+          Customized specially for you
         </p>
+        
         <Button className="text-2xl py-6 px-4">
           Begin your journey here
         </Button>
+        </div>
       </section>
 
     {/*Botões das primeiras grids*/}
       <section>
-      <h2 className="text-center mt-10 font-bold text-3xl mx-auto max-w-2xl mb-7">
+      <h2 className="text-center mt-10 font-bold text-3xl mx-auto max-w-2xl mb-3">
         Why FocusBrew?
       </h2>
       <div className= 'grid grid-cols-3 gap-6 mx-auto max-w-5xl mt-3 p-4'>
@@ -40,7 +57,7 @@ export default function Home() {
       </section>
 
   <section className='flex flex-col text-center mx-auto max-w-3xl mb-1'>
-      <h2 className='mt-7'> Simple, transparent pricing</h2>
+      <h2 className='mt-5'> Simple, transparent pricing</h2>
       <p className='mb-7'>And very affordable</p>
     <div className='grid grid-cols-2 gap-6 mb-3' >
       <div className='bg-zinc-800 rounded-xl border border-zinc-600 p-6'>
@@ -57,7 +74,16 @@ export default function Home() {
         <Button className='text-1xl py-6 px-4 mx-auto'> Buy now </Button>
       </div>
     </div>
+
   </section>
+
+
+
+
+
+
+
+
 
   <footer className='text-center mx-auto'>
     <p className='text-sm text-emerald-500'>© 2026 FocusBrew. All rights reserved.</p>
