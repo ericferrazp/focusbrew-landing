@@ -1,11 +1,27 @@
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/ui/navbar"
-
+import { Sidebar, SidebarContent, SidebarMenu, SidebarMenuItem, SidebarMenuButton } from "@/components/ui/sidebar"
 
 export default function Home() {
   return (
-    <main className="min-h-full text-white">
+    <main className="min-h-full text-white w-full overflow-x-hidden">
       <Navbar />
+       <Sidebar variant='floating'>                        {/* ← adiciona aqui */}
+    <SidebarContent>
+      <SidebarMenu>
+        <SidebarMenuItem>
+          <SidebarMenuButton>Home</SidebarMenuButton>
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <SidebarMenuButton>Features</SidebarMenuButton>
+        </SidebarMenuItem>
+        <SidebarMenuItem>
+          <SidebarMenuButton>Pricing</SidebarMenuButton>
+        </SidebarMenuItem>
+      </SidebarMenu>
+    </SidebarContent>
+  </Sidebar>
+
 
       <section className="relative flex flex-col items-center py-50 w-full border-b-4 border-emerald-500">
         <div
